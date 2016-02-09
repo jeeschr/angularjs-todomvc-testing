@@ -1,41 +1,40 @@
 module.exports = function(grunt) {
+
   grunt.initConfig({
 
-	watch: {
+  	karma: {
       options: {
-      	livereload: true
+        configFile: 'test/karma.conf.js'
       },
-      karma: {
-        files: ['app/js/**/*.js', 'test/unit/*.js']
+      unit: {
+      },
+      continuous: {
       }
-  	},
+    },
 
 
     browserSync: {
-      dev: {
-        bsFiles: {
-          src : [
-            'app/*.html',
-            'app/js/**/*.js'
-          ]
-        },
-        options: {
-          watchTask: true,
-          server: {
-            baseDir: "app"
-          }
+      bsFiles: {
+        src : [
+          'app/**/*.*'
+        ]
+      },
+      options: {
+        server: {
+          baseDir: "app"
         }
-      } 
-    }
-
-
+      }
+    },
+    
 
   });
 
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-karma');
 
-	grunt.registerTask('default', ['browserSync','watch']);
+  grunt.registerTask('test', ['karma:unit:start']);
 
+	grunt.registerTask('default', ['browserSync']);
 
 };
+
