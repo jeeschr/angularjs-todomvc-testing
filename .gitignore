@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+test/reports/
 
 !node_modules/todomvc-common/base.js
 !node_modules/todomvc-common/base.css

@@ -8,6 +8,7 @@ module.exports = function(grunt) {
         browsers: ['PhantomJS']
       },
       unit: {
+        singleRun: true
       },
       continuous: {
       }
