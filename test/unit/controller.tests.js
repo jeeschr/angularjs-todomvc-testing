@@ -32,7 +32,9 @@ describe('todomvc TodoCtrl', function() {
 		expect(todoCtrl).toBeDefined();
 	});
 
-
+	it('should not be defined', function(){
+		expect(todoCtrl).not.toBeDefined();
+	});
 
 });
 
