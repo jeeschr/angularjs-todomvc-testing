@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('test', ['karma:unit:start']);
+  grunt.registerTask('continuous-test', ['karma:continuous:start']);
 
 	grunt.registerTask('default', ['browserSync']);
 
