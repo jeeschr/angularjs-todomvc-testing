@@ -109,7 +109,7 @@ describe('todomvc - TodoCtrl -> ', function() {
 	describe('removing todos', function(){
 
 		beforeEach(function(){
-
+			// etc.
 		});
 
 	});

@@ -2,7 +2,7 @@
 // Generated on Sun Feb 07 2016 12:47:28 GMT-0500 (EST)
 
 module.exports = function(config) {
-  config.set({
+config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../',
@@ -42,13 +42,14 @@ module.exports = function(config) {
     reporters: ['progress', 'junit', 'coverage'],
 
     junitReporter: {
-        outputDir: 'test/reports/.',
-        outputFile: 'test-results.xml'
+        outputDir: 'test/reports/unit/',
+        outputFile: 'results.xml'
     },
 
     coverageReporter: {
-        dir: 'test/coverage/',
-        type: 'cobertura'
+        dir: 'test/reports/coverage/',
+        type: 'cobertura',
+        file: 'results.xml'
     },
     // web server port
     port: 3000,
@@ -79,5 +80,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+})
 }
