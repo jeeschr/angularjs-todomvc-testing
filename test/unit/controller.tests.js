@@ -7,17 +7,17 @@ describe('todomvc - TodoCtrl -> ', function() {
 
 	beforeEach(module('todoCtrl'));
 
-    var $scope, $rootScope, $location, $controller;
+	var $scope, $rootScope, $location, $controller;
 
-    var todoStorageMock = {
-      storage: [],
-      get: function () {
-        return this.storage;
-      },
-      put: function (value) {
-        this.storage = value;
-      }
-    };
+	var todoStorageMock = {
+		storage: [],
+		get: function () {
+			return this.storage;
+		},
+		put: function (value) {
+			this.storage = value;
+		}
+	};
 
 	beforeEach(inject(function(_$rootScope_, _$controller_, _$location_){
 		$rootScope = _$rootScope_;
@@ -80,8 +80,8 @@ describe('todomvc - TodoCtrl -> ', function() {
 		});
 
 		afterEach(function() {
-          todoStorageMock.storage = [];
-        });
+			todoStorageMock.storage = [];
+		});
 
 		it('should clone the original todo', function(){
 			$scope.TC.editTodo($scope.TC.todos[0]);
@@ -107,14 +107,10 @@ describe('todomvc - TodoCtrl -> ', function() {
 	});
 
 	describe('removing todos', function(){
-
 		beforeEach(function(){
 			// etc.
 		});
-
 	});
-
-
 
 });
 
